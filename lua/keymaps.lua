@@ -47,5 +47,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Custom keymaps
 vim.keymap.set('n', '<leader>tc', ':Codeium Toggle<CR>', { desc = '[T]oggle [C]odeium' })
+vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
 
 -- vim: ts=2 sts=2 sw=2 et
