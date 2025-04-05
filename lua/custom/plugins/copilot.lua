@@ -4,7 +4,6 @@ return {
     event = "InsertEnter",
     config = function()
         require('copilot').setup({
-            enabled = false,
             panel = {
               enabled = true,
               auto_refresh = false,
