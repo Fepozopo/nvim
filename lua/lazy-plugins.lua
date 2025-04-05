@@ -64,7 +64,7 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   -- { import = 'custom.plugins' },
   require 'custom.plugins.catppuccin',
-  require 'custom.plugins.windsurf',
+  -- require 'custom.plugins.windsurf',
   require 'custom.plugins.oil',
   require 'custom.plugins.yazi',
   require 'custom.plugins.copilot',
