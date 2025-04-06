@@ -47,7 +47,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Custom keymaps
 vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
--- vim.keymap.set('n', '<leader>tw', ':Codeium Toggle<CR>', { desc = '[T]oggle [W]indsurf' })
 vim.keymap.set('n', '<leader>tc', ':Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
 vim.keymap.set('n', '<leader>gs', ':Copilot status<CR>', { desc = '[G]itHub Copilot [S]tatus' })
 vim.keymap.set('n', '<leader>gp', ':Copilot panel<CR>', { desc = '[G]itHub Copilot [P]anel' })
