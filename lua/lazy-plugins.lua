@@ -67,6 +67,7 @@ require('lazy').setup({
   require 'custom.plugins.oil',
   require 'custom.plugins.yazi',
   require 'custom.plugins.copilot',
+  require 'custom.plugins.lualine',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
