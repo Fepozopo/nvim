@@ -67,3 +67,6 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Display a tab character as 4 spaces
+vim.opt.tabstop = 4
