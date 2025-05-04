@@ -47,7 +47,7 @@ return {
       },
       copilot_node_command = 'node', -- Node.js version must be > 20
       workspace_folders = {},
-      copilot_model = '', -- Current LSP default is gpt-4o-copilot
+      copilot_model = '', -- Current LSP default
       root_dir = function()
         return vim.fs.dirname(vim.fs.find('.git', { upward = true })[1])
       end,
@@ -72,4 +72,3 @@ return {
     }
   end,
 }
-
