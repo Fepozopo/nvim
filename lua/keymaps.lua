@@ -48,9 +48,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Custom keymaps
 vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
 vim.keymap.set('n', '<leader>tc', ':Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
-vim.keymap.set('n', '<leader>gs', ':Copilot status<CR>', { desc = '[G]itHub Copilot [S]tatus' })
-vim.keymap.set('n', '<leader>gp', ':Copilot panel<CR>', { desc = '[G]itHub Copilot [P]anel' })
-vim.keymap.set('n', '<leader>ge', ':Copilot enable<CR>', { desc = '[G]itHub Copilot [E]nable' })
-vim.keymap.set('n', '<leader>gd', ':Copilot disable<CR>', { desc = '[G]itHub Copilot [D]isable' })
+vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
+vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
+vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]nable' })
+vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
 
 -- vim: ts=2 sts=2 sw=2 et
