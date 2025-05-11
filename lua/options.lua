@@ -70,3 +70,6 @@ vim.opt.confirm = true
 
 -- Display a tab character as 4 spaces
 vim.opt.tabstop = 4
+
+-- Enable spell checking
+vim.opt.spell = true
