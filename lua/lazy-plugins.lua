@@ -66,6 +66,7 @@ require('lazy').setup({
   require 'custom.plugins.yazi',
   require 'custom.plugins.copilot',
   require 'custom.plugins.lualine',
+  require 'custom.plugins.copilot_chat',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

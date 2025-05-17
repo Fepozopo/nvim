@@ -47,10 +47,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Custom keymaps
 vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
-vim.keymap.set('n', '<leader>tc', ':Copilot toggle<CR>', { desc = '[T]oggle [C]opilot' })
+vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = '[C]opilot [T]oggle' })
 vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
-vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
-vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]nable' })
-vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
+vim.keymap.set('n', '<leader>pn', ':Copilot panel<CR>', { desc = 'Co[p]ilot Pa[n]el' })
+vim.keymap.set('n', '<leader>pc', ':CopilotChatToggle<CR>', { desc = 'Co[p]ilot [C]hat Toggle' })
+vim.keymap.set('n', '<leader>pr', ':CopilotChatReset<CR>', { desc = 'Co[p]ilot Chat [R]eset' })
+vim.keymap.set('n', '<leader>pp', ':CopilotChatPrompts<CR>', { desc = 'Co[p]ilot Chat [T]ransform' })
+vim.keymap.set('n', '<leader>pm', ':CopilotChatModels<CR>', { desc = 'Co[p]ilot Chat [M]odels' })
+vim.keymap.set('n', '<leader>pa', ':CopilotChatAgents<CR>', { desc = 'Co[p]ilot Chat [A]gents' })
 
 -- vim: ts=2 sts=2 sw=2 et

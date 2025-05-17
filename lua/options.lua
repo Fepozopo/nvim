@@ -72,4 +72,4 @@ vim.opt.confirm = true
 vim.opt.tabstop = 4
 
 -- Enable spell checking
-vim.opt.spell = true
+vim.opt.spell = false
