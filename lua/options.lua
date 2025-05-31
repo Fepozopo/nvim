@@ -73,3 +73,6 @@ vim.opt.tabstop = 4
 
 -- Enable spell checking
 vim.opt.spell = false
+
+-- Disable word wrap
+vim.opt.wrap = false
