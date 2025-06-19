@@ -35,6 +35,7 @@ return {
         lua = { 'stylua' },
         go = { 'goimports' },
         python = { 'ruff' },
+        rust = { 'rust_analyzer' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
