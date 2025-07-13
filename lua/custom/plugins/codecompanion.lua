@@ -111,7 +111,7 @@ return {
                     },
                     opts = {
                         prompt_decorator = nil, -- function(message, adapter, context) ...
-                        completion_provider = "blink", -- blink|cmp|coc|default
+                        completion_provider = "cmp", -- blink|cmp|coc|default
                         goto_file_action = nil, -- default jump action
                     },
                 },
