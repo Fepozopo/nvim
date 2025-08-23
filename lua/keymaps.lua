@@ -53,13 +53,6 @@ vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = '[C]opilot [T]
 vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
 vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
 
--- Copilot Chat keymaps
--- vim.keymap.set('n', '<leader>pc', ':CopilotChatToggle<CR>', { desc = 'Co[p]ilot [C]hat Toggle' })
--- vim.keymap.set('n', '<leader>pr', ':CopilotChatReset<CR>', { desc = 'Co[p]ilot Chat [R]eset' })
--- vim.keymap.set('n', '<leader>pp', ':CopilotChatPrompts<CR>', { desc = 'Co[p]ilot Chat [T]ransform' })
--- vim.keymap.set('n', '<leader>pm', ':CopilotChatModels<CR>', { desc = 'Co[p]ilot Chat [M]odels' })
--- vim.keymap.set('n', '<leader>pa', ':CopilotChatAgents<CR>', { desc = 'Co[p]ilot Chat [A]gents' })
-
 -- CodeCompanion keymaps
 vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<LocalLeader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
