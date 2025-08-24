@@ -93,7 +93,10 @@ return {
       -- Strategies
       strategies = {
         chat = {
-          adapter = 'copilot',
+          adapter = {
+              name = 'copilot',
+              model = 'gpt-5-mini',
+          },
           keymaps = {
             send = { modes = { n = '<C-s>', i = '<C-s>' }, opts = {} },
             close = { modes = { n = '<C-c>', i = '<C-c>' }, opts = {} },
@@ -120,7 +123,10 @@ return {
           },
         },
         inline = {
-          adapter = 'copilot',
+          adapter = {
+              name = 'copilot',
+              model = 'gpt-5-mini',
+          },
           keymaps = {
             accept_change = { modes = { n = 'ga' }, description = 'Accept the suggested change' },
             reject_change = { modes = { n = 'gr' }, description = 'Reject the suggested change' },
@@ -128,7 +134,10 @@ return {
           variables = {},
         },
         cmd = {
-          adapter = 'copilot',
+          adapter = {
+              name = 'copilot',
+              model = 'gpt-5-mini',
+          },
         },
       },
       -- General plugin options
