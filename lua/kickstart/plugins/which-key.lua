@@ -69,6 +69,7 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>p', group = 'Co[p]ilot' },
         { '<leader>o', group = '[O]pencode'},
+        { '<leader>b', group = 'Ta[b]'},
       },
     },
   },

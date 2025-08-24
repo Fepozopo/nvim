@@ -48,6 +48,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Custom keymaps
 vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
 
+-- Tab keymaps
+vim.keymap.set('n', '<leader>be', ':tabe<CR>', { desc = 'Ta[b] N[e]w' })
+vim.keymap.set('n', '<leader>bc', ':tabc<CR>', { desc = 'Ta[b] [C]lose' })
+vim.keymap.set('n', '<leader>bn', ':tabn<CR>', { desc = 'Ta[b] [N]ext' })
+vim.keymap.set('n', '<leader>bp', ':tabp<CR>', { desc = 'Ta[b] [P]revious' })
+
 -- Copilot keymaps
 vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = '[C]opilot [T]oggle' })
 vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
