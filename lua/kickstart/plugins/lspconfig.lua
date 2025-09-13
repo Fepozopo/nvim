@@ -211,7 +211,7 @@ return {
       local servers = {
         clangd = {},
         gopls = {},
-        pyright = {},
+        basedpyright = {},
         zls = {},
         dockerls = {},
         yamlls = {},
@@ -228,7 +228,7 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         --
-        -- Vue 3        
+        -- Vue 3
         volar = {
           filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
           init_options = {
