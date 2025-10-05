@@ -55,12 +55,13 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
   require 'custom.plugins.catppuccin',
   require 'custom.plugins.oil',
-  require 'custom.plugins.yazi',
+  -- require 'custom.plugins.yazi',
   require 'custom.plugins.copilot',
   require 'custom.plugins.lualine',
   require 'custom.plugins.codecompanion',
-  require 'custom.plugins.opencode',
+  -- require 'custom.plugins.opencode',
   -- require 'custom.plugins.copilot-lsp',
+  -- require 'custom.plugins.sidekick',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
