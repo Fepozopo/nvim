@@ -70,6 +70,7 @@ return {
         { '<leader>p', group = 'Co[p]ilot' },
         -- { '<leader>o', group = '[O]pencode'},
         { '<leader>b', group = 'Ta[b]'},
+        { '<leader>m', group = '[M]ake Terminal'},
       },
     },
   },
