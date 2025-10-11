@@ -46,7 +46,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Custom keymaps
-vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
+-- vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
+vim.keymap.set('n', '<leader>o', ':Oil --float<CR>', { desc = '[O]il' })
+vim.api.nvim_set_keymap('n', '<leader>m', ':vsplit | terminal<CR>', { noremap = true, silent = true, desc = '[M]ake new terminal' })
 
 -- Tab keymaps
 vim.keymap.set('n', '<leader>be', ':tabe<CR>', { desc = 'Ta[b] N[e]w' })
