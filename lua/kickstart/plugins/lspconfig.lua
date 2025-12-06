@@ -319,12 +319,49 @@ return {
       --
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
+      local raw_ensure = vim.tbl_keys(servers or {})
+      vim.list_extend(raw_ensure, {
         'stylua', -- Used to format Lua code
         'goimports', -- Used to format Go code
         'ruff', -- Used to format/lint Python code
       })
+
+      -- Filter the list so we only call Mason for packages that exist in its registry.
+      -- This avoids `mason-registry.get_package(name)` throwing an error for unknown names.
+      local ok_reg, registry = pcall(require, 'mason-registry')
+      local ensure_installed = {}
+      if ok_reg and registry then
+        -- Mapping from lspconfig server names to mason package names when they differ.
+        local mapping = {
+          ts_ls = 'typescript-language-server',
+          lua_ls = 'lua-language-server',
+          -- If you discover a mismatch (for example volar is named differently in your mason),
+          -- add it here, e.g. volar = 'some-mason-package-name'
+        }
+
+        for _, name in ipairs(raw_ensure) do
+          -- Try raw name first
+          local ok_raw = pcall(function() return registry.get_package(name) end)
+          if ok_raw then
+            table.insert(ensure_installed, name)
+          else
+            -- Try mapped name
+            local mapped = mapping[name]
+            if mapped then
+              local ok_mapped = pcall(function() return registry.get_package(mapped) end)
+              if ok_mapped then
+                table.insert(ensure_installed, mapped)
+              end
+            end
+          end
+        end
+      else
+        -- If the registry isn't available for whatever reason, fall back to the raw list
+        -- so mason-tool-installer can still attempt installs (this is less safe but
+        -- avoids silently doing nothing).
+        ensure_installed = raw_ensure
+      end
+
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
