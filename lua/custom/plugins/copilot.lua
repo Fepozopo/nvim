@@ -1,11 +1,12 @@
 return {
   'zbirenbaum/copilot.lua',
+  dependencies = { 'copilotlsp-nvim/copilot-lsp' },
   requires = {
       "copilotlsp-nvim/copilot-lsp",
+      init = function()
+        vim.g.copilot_nes_debounce = 500
+      end,
     },
-  init = function()
-    vim.g.copilot_nes_debounce = 500
-  end,
   cmd = 'Copilot',
   event = 'InsertEnter',
   config = function()
@@ -42,7 +43,7 @@ return {
       nes = {
         enabled = true,
         keymap = {
-            accept_and_goto = "<leader>y",
+            accept_and_goto = "<M-j>",
             accept = false,
             dismiss = "<Esc>",
         },
