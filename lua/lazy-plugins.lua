@@ -61,7 +61,7 @@ require('lazy').setup({
   require 'custom.plugins.lualine',
   -- require 'custom.plugins.codecompanion',
   require 'custom.plugins.opencode',
-  -- require 'custom.plugins.copilot-lsp',
+  require 'custom.plugins.copilot-lsp',
   -- require 'custom.plugins.sidekick',
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
