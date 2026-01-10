@@ -211,7 +211,7 @@ return {
       local servers = {
         clangd = {},
         gopls = {},
-        basedpyright = {},
+        ty = {},
         zls = {},
         dockerls = {},
         yamlls = {},
