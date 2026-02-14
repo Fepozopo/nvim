@@ -60,7 +60,6 @@ require('lazy').setup({
   require 'custom.plugins.copilot',
   require 'custom.plugins.lualine',
   -- require 'custom.plugins.codecompanion',
-  -- require 'custom.plugins.opencode',
   require 'custom.plugins.sidekick',
   -- require 'custom.plugins.99'
   --
