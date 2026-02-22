@@ -61,8 +61,9 @@ vim.keymap.set('n', '<leader>bn', ':tabn<CR>', { desc = 'Ta[b] [N]ext' })
 vim.keymap.set('n', '<leader>bp', ':tabp<CR>', { desc = 'Ta[b] [P]revious' })
 
 -- Copilot keymaps
-vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = '[C]opilot [T]oggle Buffer Status' })
+vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = 'Co[p]ilot [T]oggle Buffer Status' })
 vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
+vim.keymap.set('n', '<leader>pl', ':Copilot model list<CR>', { desc = 'Co[p]ilot [L]ist Models' })
 vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
 vim.keymap.set('n', '<leader>pa', ':Copilot suggestion toggle_auto_trigger<CR>', { desc = 'Co[p]ilot Toggle [A]uto Trigger' })
 vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
