@@ -26,12 +26,17 @@ end)
 -- Enable break indent
 vim.opt.breakindent = true
 
+vim.opt.smartindent = true -- smart auto-indent
+vim.opt.autoindent = true -- copy indent from current line
+
 -- Save undo history
 vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.opt.ignorecase = true -- case insensitive search
+vim.opt.smartcase = true -- case sensitive if uppercase in string
+vim.opt.hlsearch = true -- highlight search matches
+vim.opt.incsearch = true -- show matches as you type
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -74,8 +79,22 @@ vim.opt.tabstop = 4
 -- Enable spell checking
 vim.opt.spell = false
 
--- Disable word wrap
-vim.opt.wrap = true
-
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+
+vim.opt.showmatch = true -- highlights matching brackets
+vim.opt.autoread = true -- auto-reload changes if outside of neovim
+vim.opt.autowrite = false -- do not auto-save
+
+-- Word wrap
+vim.opt.wrap = false
+-- wrap, linebreak and spellcheck on markdown and text files
+vim.api.nvim_create_autocmd("FileType", {
+	group = augroup,
+	pattern = { "markdown", "text", "gitcommit" },
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true
+		vim.opt_local.spell = true
+	end,
+})
