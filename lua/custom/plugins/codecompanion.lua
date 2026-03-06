@@ -116,7 +116,7 @@ return {
                 ---@param args { tools: string[]} The tools available
                 ---@return string
                 prompt = function(args)
-                return require("custom.config.codecompanion_tools_prompt")
+                -- return require("custom.config.codecompanion_tools_prompt")
             end,
               },
             },
@@ -131,7 +131,7 @@ return {
             prompt_decorator = nil, -- function(message, adapter, context) ...
             completion_provider = 'cmp', -- blink|cmp|coc|default
             goto_file_action = nil, -- default jump action
-            system_prompt = require("custom.config.codecompanion_system_prompt"), -- custom system prompt
+            -- system_prompt = require("custom.config.codecompanion_system_prompt"), -- custom system prompt
           },
         },
         inline = {
