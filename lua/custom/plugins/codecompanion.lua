@@ -128,7 +128,7 @@ return {
             user = 'Me',
           },
           opts = {
-            prompt_decorator = nil, -- function(message, adapter, context) ...
+            prompt_decorator = nil, -- function(message, adapter, context)
             completion_provider = 'cmp', -- blink|cmp|coc|default
             goto_file_action = nil, -- default jump action
             -- system_prompt = require("custom.config.codecompanion_system_prompt"), -- custom system prompt
