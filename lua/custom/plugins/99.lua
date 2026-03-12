@@ -10,10 +10,6 @@ return {
         local basename = vim.fs.basename(cwd)
 		_99.setup({
             -- provider = _99.Providers.ClaudeCodeProvider,  -- default: OpenCodeProvider
-            provider = _99.OpenCodeProvider,
-                -- model is optional, overrides the provider's default
-                model = "opencode/gpt-5.1-mini",
-
 			logger = {
 				level = _99.DEBUG,
 				path = "/tmp/" .. basename .. ".99.debug",
@@ -57,10 +53,13 @@ return {
                     -- max_files = 5000,            -- cap on total discovered files
                     -- exclude = { ".env", ".env.*", "node_modules", ".git", ... },
                 },
+                --- File Discovery:
+                --- - In git repos: Uses `git ls-files` which automatically respects .gitignore
+                --- - Non-git repos: Falls back to filesystem scanning with manual excludes
+                --- - Both methods apply the configured `exclude` list on top of gitignore
 
-                --- What autocomplete do you use.  We currently only
-                --- support cmp right now
-                source = "cmp" | "blink",
+                --- What autocomplete engine to use. Defaults to native (built-in) if not specified.
+                source = "native", -- "native" (default), "cmp", or "blink"
             },
 
             --- WARNING: if you change cwd then this is likely broken
@@ -73,7 +72,7 @@ return {
             --- /foo/AGENT.md
             --- assuming that /foo is project root (based on cwd)
 			md_files = {
-				"AGENT.md",
+				"AGENTS.md",
 			},
 		})
 
