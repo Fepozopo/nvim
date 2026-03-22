@@ -38,19 +38,21 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
+
+-- vim: ts=2 sts=2 sw=2 et
 
 -- better movement in wrapped text
 vim.keymap.set("n", "j", function()
-	return vim.v.count == 0 and "gj" or "j"
+    return vim.v.count == 0 and "gj" or "j"
 end, { expr = true, silent = true, desc = "Down (wrap-aware)" })
 vim.keymap.set("n", "k", function()
-	return vim.v.count == 0 and "gk" or "k"
+    return vim.v.count == 0 and "gk" or "k"
 end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 
 vim.keymap.set("n", "<C-Up>", "<C-w>+", { desc = "Increase window height" })
@@ -68,14 +70,14 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
--- Custom keymaps for plugins
--- vim.keymap.set('n', '<leader>no', ':Oil --float<CR>', { desc = '[N]avigate using [O]il' })
-vim.keymap.set('n', '<leader>o', ':Oil --float<CR>', { desc = '[O]il' })
+vim.keymap.set({ "n", "i", "x", "s" }, "<D-s>", "<ESC>:w<CR>", { desc = "Save file" })
 
 -- Terminal keymaps
 vim.api.nvim_set_keymap('n', '<leader>mt', ':terminal<CR>', { noremap = true, silent = true, desc = '[M]ake [T]erminal' })
-vim.api.nvim_set_keymap('n', '<leader>mv', ':vsplit | terminal<CR>', { noremap = true, silent = true, desc = '[M]ake Terminal ([V]ertical Split)' })
-vim.api.nvim_set_keymap('n', '<leader>mh', ':split | terminal<CR>', { noremap = true, silent = true, desc = '[M]ake Terminal ([H]orizontal Split)' })
+vim.api.nvim_set_keymap('n', '<leader>mv', ':vsplit | terminal<CR>',
+    { noremap = true, silent = true, desc = '[M]ake Terminal ([V]ertical Split)' })
+vim.api.nvim_set_keymap('n', '<leader>mh', ':split | terminal<CR>',
+    { noremap = true, silent = true, desc = '[M]ake Terminal ([H]orizontal Split)' })
 
 -- Tab keymaps
 vim.keymap.set('n', '<leader>be', ':tabe<CR>', { desc = 'Ta[b] N[e]w' })
@@ -83,12 +85,16 @@ vim.keymap.set('n', '<leader>bc', ':tabc<CR>', { desc = 'Ta[b] [C]lose' })
 vim.keymap.set('n', '<leader>bn', ':tabn<CR>', { desc = 'Ta[b] [N]ext' })
 vim.keymap.set('n', '<leader>bp', ':tabp<CR>', { desc = 'Ta[b] [P]revious' })
 
+-- Custom keymaps for plugins
+vim.keymap.set('n', '<leader>n', ':Oil --float<CR>', { desc = '[N]avigate' })
+
 -- Copilot keymaps
 vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = 'Co[p]ilot [T]oggle Buffer Status' })
 vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
 vim.keymap.set('n', '<leader>pl', ':Copilot model list<CR>', { desc = 'Co[p]ilot [L]ist Models' })
 vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
-vim.keymap.set('n', '<leader>pa', ':Copilot suggestion toggle_auto_trigger<CR>', { desc = 'Co[p]ilot Toggle [A]uto Trigger' })
+vim.keymap.set('n', '<leader>pa', ':Copilot suggestion toggle_auto_trigger<CR>',
+    { desc = 'Co[p]ilot Toggle [A]uto Trigger' })
 vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
 vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]nable' })
 
@@ -98,5 +104,3 @@ vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]
 -- vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
 -- -- Expand 'cc' into 'CodeCompanion' in the command line
 -- vim.cmd([[cab cc CodeCompanion]])
-
--- vim: ts=2 sts=2 sw=2 et
