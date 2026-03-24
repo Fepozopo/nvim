@@ -97,10 +97,3 @@ vim.keymap.set('n', '<leader>pa', ':Copilot suggestion toggle_auto_trigger<CR>',
     { desc = 'Co[p]ilot Toggle [A]uto Trigger' })
 vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
 vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]nable' })
-
--- CodeCompanion keymaps
--- vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
--- vim.keymap.set({ "n", "v" }, "<LocalLeader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
--- vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
--- -- Expand 'cc' into 'CodeCompanion' in the command line
--- vim.cmd([[cab cc CodeCompanion]])
