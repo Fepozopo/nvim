@@ -70,7 +70,8 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
-vim.keymap.set({ "n", "i", "x", "s" }, "<D-s>", "<ESC>:w<CR>", { desc = "Save file" })
+vim.keymap.set({ "n", }, "<D-s>", ":w<CR>", { desc = "Save file" })
+vim.keymap.set({ "i" }, "<D-s>", "<ESC>:w<CR>i", { desc = "Save file" })
 
 -- Terminal keymaps
 vim.api.nvim_set_keymap('n', '<leader>mt', ':terminal<CR>', { noremap = true, silent = true, desc = '[M]ake [T]erminal' })
