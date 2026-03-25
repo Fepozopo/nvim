@@ -85,15 +85,18 @@ vim.keymap.set('n', '<leader>bc', ':tabc<CR>', { desc = 'Ta[b] [C]lose' })
 vim.keymap.set('n', '<leader>bn', ':tabn<CR>', { desc = 'Ta[b] [N]ext' })
 vim.keymap.set('n', '<leader>bp', ':tabp<CR>', { desc = 'Ta[b] [P]revious' })
 
--- Custom keymaps for plugins
+-- Oil keymap
 vim.keymap.set('n', '<leader>n', ':Oil --float<CR>', { desc = '[N]avigate' })
 
--- Copilot keymaps
-vim.keymap.set('n', '<leader>pt', ':Copilot toggle<CR>', { desc = 'Co[p]ilot [T]oggle Buffer Status' })
-vim.keymap.set('n', '<leader>ps', ':Copilot status<CR>', { desc = 'Co[p]ilot [S]tatus' })
-vim.keymap.set('n', '<leader>pl', ':Copilot model list<CR>', { desc = 'Co[p]ilot [L]ist Models' })
-vim.keymap.set('n', '<leader>pp', ':Copilot panel<CR>', { desc = 'Co[p]ilot [P]anel' })
-vim.keymap.set('n', '<leader>pa', ':Copilot suggestion toggle_auto_trigger<CR>',
-    { desc = 'Co[p]ilot Toggle [A]uto Trigger' })
-vim.keymap.set('n', '<leader>pd', ':Copilot disable<CR>', { desc = 'Co[p]ilot [D]isable' })
-vim.keymap.set('n', '<leader>pe', ':Copilot enable<CR>', { desc = 'Co[p]ilot [E]nable' })
+-- Markdown preview keymap
+vim.keymap.set('n', '<leader>p', ':MarkdownPreviewToggle<CR>', { desc = 'Markdown [P]review Toggle' })
+
+-- Copilot AI keymaps
+vim.keymap.set('n', '<leader>at', ':Copilot toggle<CR>', { desc = '[A]I Copilot [T]oggle Buffer Status' })
+vim.keymap.set('n', '<leader>as', ':Copilot status<CR>', { desc = '[A]I Copilot [S]tatus' })
+vim.keymap.set('n', '<leader>al', ':Copilot model list<CR>', { desc = '[A]I Copilot [L]ist Models' })
+vim.keymap.set('n', '<leader>ap', ':Copilot panel<CR>', { desc = '[A]I Copilot [P]anel' })
+vim.keymap.set('n', '<leader>aa', ':Copilot suggestion toggle_auto_trigger<CR>',
+    { desc = '[A]I Copilot Toggle [A]uto Trigger' })
+vim.keymap.set('n', '<leader>ad', ':Copilot disable<CR>', { desc = '[A]I Copilot [D]isable' })
+vim.keymap.set('n', '<leader>ae', ':Copilot enable<CR>', { desc = '[A]I Copilot [E]nable' })
