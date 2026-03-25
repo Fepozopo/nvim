@@ -74,11 +74,10 @@ vim.keymap.set({ "n", }, "<D-s>", ":w<CR>", { desc = "Save file" })
 vim.keymap.set({ "i" }, "<D-s>", "<ESC>:w<CR>i", { desc = "Save file" })
 
 -- Terminal keymaps
-vim.api.nvim_set_keymap('n', '<leader>mt', ':terminal<CR>', { noremap = true, silent = true, desc = '[M]ake [T]erminal' })
-vim.api.nvim_set_keymap('n', '<leader>mv', ':vsplit | terminal<CR>',
-    { noremap = true, silent = true, desc = '[M]ake Terminal ([V]ertical Split)' })
-vim.api.nvim_set_keymap('n', '<leader>mh', ':split | terminal<CR>',
-    { noremap = true, silent = true, desc = '[M]ake Terminal ([H]orizontal Split)' })
+vim.api.nvim_set_keymap('n', '<leader>mtv', ':vsplit | terminal<CR>',
+    { noremap = true, silent = true, desc = 'Make Terminal ([V]ertical Split)' })
+vim.api.nvim_set_keymap('n', '<leader>mth', ':split | terminal<CR>',
+    { noremap = true, silent = true, desc = 'Make Terminal ([H]orizontal Split)' })
 
 -- Tab keymaps
 vim.keymap.set('n', '<leader>be', ':tabe<CR>', { desc = 'Ta[b] N[e]w' })
